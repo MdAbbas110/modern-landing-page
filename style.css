@@ -13,7 +13,6 @@ html, body {
 #main {
     width: 100%;
     height: 100vh;
-    background-color: rgb(102, 203, 55);
 }
 
 #back {
@@ -23,6 +22,7 @@ html, body {
 }
 
 #top {
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -58,6 +58,7 @@ html, body {
 }
 
 #nav a{
+    pointer-events: all;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
@@ -94,6 +95,8 @@ html, body {
 }
 
 #hero-left button {
+    pointer-events: all;
+    cursor: pointer;
     padding: .8vw 3vw;
     font-size: 3vw;
     margin-top: 2vw;
@@ -119,7 +122,9 @@ html, body {
     height: 170px;
     margin-top: 20px;
     margin-bottom: 30px;
-    background-color: #fff;
+    background-image: url(https://images.pexels.com/photos/4728655/pexels-photo-4728655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: center;
 }
 
 #hero-right p:nth-child(3){
