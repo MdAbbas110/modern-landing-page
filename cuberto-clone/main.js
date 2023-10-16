@@ -18,15 +18,39 @@ gsap.to('.fleftelm', {
   ease: Power1,
 });
 
-let sections = document.querySelectorAll('.fleftelm')
+// let sections = document.querySelectorAll('.fleftelm');
+// Shery.imageEffect('.images', {
+//   style: 2,
+//   config: { onMouse: { value: 1 } },
+//   slideStyle: (setScroll) => {
+//     sections.forEach(function (section, index) {
+//       ScrollTrigger.create({
+//         trigger: section,
+//         start: 'top top',
+//         scrub: 1,
+//         onUpdate: function (prog) {
+//           setScroll(prog.progress + index);
+//         },
+//       });
+//     });
+//   },
+// });
 
-Shery.imageEffect(".images", {
-    style: 5,
-    slideStyle: (setScroll) => {
-        sections.forEach(function (section) {
-            ScrollTrigger.create({
-                trigger: section
-            })
-        })
-    }
-})
+let sections = document.querySelectorAll('.fleftelm');
+console.log(sections);
+Shery.imageEffect('.images', {
+  style: 4,
+  config: { onMouse: { value: 1 } },
+  slideStyle: (setScroll) => {
+    sections.forEach(function (section, index) {
+      ScrollTrigger.create({
+        trigger: section,
+        start: 'top top',
+        scrub: 1,
+        onUpdate: function (prog) {
+          setScroll(prog.progress + index);
+        },
+      });
+    });
+  },
+});
